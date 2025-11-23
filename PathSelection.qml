@@ -68,13 +68,6 @@ Item {
                 font.family: myFont
                 color: myFontColor
                 font.pixelSize: 32
-
-                Binding {
-                    target: appController
-                    property: "sourceFolder"
-                    value: fromPathText.text
-                }
-
             }
 
             RowLayout {
@@ -113,12 +106,6 @@ Item {
                 font.family: myFont
                 color: myFontColor
                 font.pixelSize: 32
-
-                Binding {
-                    target: appController
-                    property: "targetFolder"
-                    value: toPathText.text
-                }
             }
 
             CheckBox {

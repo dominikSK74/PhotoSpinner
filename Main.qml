@@ -6,10 +6,18 @@ ApplicationWindow {
     visible: true
     visibility: Window.Maximized
     title: qsTr("Dla teściowej")
-    minimumHeight: 720
-    minimumWidth: 1280
+    minimumHeight: 400
+    minimumWidth: 680
 
-    PathSelection {
+    Loader {
+        id: screenLoader
         anchors.fill: parent
+        source: appController.screen
+    }
+
+    Binding {
+        target: appController
+        property: "screen"
+        value: screenLoader.source
     }
 }

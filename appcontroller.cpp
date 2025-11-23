@@ -2,7 +2,7 @@
 
 
 AppController::AppController(QObject *parent)
-    : QObject{parent}
+    : QObject{parent}, m_screen("PathSelection.qml")
 {}
 
 
@@ -17,7 +17,7 @@ void AppController::selectSourceFolder() {
     if (!folder.isEmpty()) {
 
         setSourceFolder(folder);
-        changeSourceIcon("qrc:assets/foldercheck.svg"); //TODO
+        changeSourceIcon("qrc:assets/foldercheck.svg");
     }
 }
 
@@ -30,7 +30,7 @@ void AppController::selectTargetFolder() {
 
     if (!folder.isEmpty()) {
         setTargetFolder(folder);
-        changeTargetIcon("qrc:assets/foldercheck.svg"); //TODO
+        changeTargetIcon("qrc:assets/foldercheck.svg");
     }
 }
 
@@ -38,8 +38,40 @@ void AppController::browsePictures() {
     QString src = sourceFolder();
     QString trg = targetFolder();
 
-    qDebug() << src;
-    qDebug() << trg;
+    if(src.isEmpty() || trg.isEmpty()){
+        QMessageBox::warning(nullptr, "Uwaga", "Nie podano poprawnych ścieżek do folderów!");
+        return;
+    }
+
+    if(!QDir(src).exists() || !QDir(trg).exists()){
+        QMessageBox::warning(nullptr, "Uwaga", "Nie podano poprawnych ścieżek do folderów!");
+        return;
+    }
+
+
+
+    QDir dir(src);
+
+    QStringList filters;
+    filters << "*.jpg" << "*.jpeg" << "*.png";
+
+    QStringList imageFiles = dir.entryList(filters, QDir::Files);
+    QStringList imagePaths;
+
+    for (const QString &file : imageFiles) {
+        imagePaths << dir.absoluteFilePath(file);
+    }
+
+    for(const QString &file : imagePaths) {
+        qDebug() << file;
+    }
+
+    setScreen("ImageViewer.qml");
+
+    QString filePath = "file:///" + imagePaths[0];
+    qDebug() << filePath;
+
+    setImagePath(filePath);
 }
 
 
@@ -58,5 +90,24 @@ void AppController::setTargetFolder(const QString &folder) {
     if (folder != m_targetFolder) {
         m_targetFolder = folder;
         emit targetFolderChanged();
+    }
+}
+
+QString AppController::screen() const {
+    return m_screen;
+}
+
+void AppController::setScreen(const QString &screenFile){
+    if(screenFile != m_screen){
+        m_screen = screenFile;
+        emit screenChanged();
+    }
+}
+
+QString AppController::imagePath() const { return m_imagePath; }
+void AppController::setImagePath(const QString &imagePath) {
+    if(imagePath != m_imagePath){
+        m_imagePath = imagePath;
+        emit imagePathChanged();
     }
 }

@@ -22,6 +22,7 @@ qt_add_qml_module(appPhotoSpinner
         PathSelection.qml
         RESOURCES resources.qrc
         SOURCES appcontroller.h appcontroller.cpp
+        QML_FILES ImageViewer.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
