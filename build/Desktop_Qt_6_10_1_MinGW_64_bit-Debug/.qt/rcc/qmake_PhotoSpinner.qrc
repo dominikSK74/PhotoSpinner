@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/PhotoSpinner">
+    <file alias="qmldir">C:/Users/Dominik/Documents/Projects/PhotoSpinner/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/PhotoSpinner/qmldir</file>
+  </qresource>
+</RCC>
+

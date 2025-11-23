@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/background.jpg</file>
+        <file>assets/foldercheck.svg</file>
+        <file>assets/folder.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,7 @@
+module PhotoSpinner
+typeinfo appPhotoSpinner.qmltypes
+prefer :/qt/qml/PhotoSpinner/
+Main 254.0 Main.qml
+PathSelection 254.0 PathSelection.qml
+depends QtQuick
+

@@ -1,0 +1,205 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5fcf0db0b305cc5a9a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PhotoSpinner",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-45b80cfe0a41a01a5e88.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-abd8362195afd34bbd39.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-2277b6f9c1baf03382fc.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-1ec9d81119c18caa2ce0.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-a6514b84fafd66b291a7.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner-Debug-9a8d11654b28370568a8.json",
+					"name" : "appPhotoSpinner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_autogen-Debug-23baca02ee1cf4375d7d.json",
+					"name" : "appPhotoSpinner_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_autogen_timestamp_deps-Debug-5da7169c68df372c4156.json",
+					"name" : "appPhotoSpinner_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_copy_qml-Debug-c77949b5c2638271565a.json",
+					"name" : "appPhotoSpinner_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_copy_res-Debug-950f3d93ae1a0fa0d107.json",
+					"name" : "appPhotoSpinner_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_qmlimportscan-Debug-30f18b3788ef327d733b.json",
+					"name" : "appPhotoSpinner_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_qmllint-Debug-3e44b2f966d691533e3e.json",
+					"name" : "appPhotoSpinner_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_qmllint_json-Debug-516d0b083494ce2c964f.json",
+					"name" : "appPhotoSpinner_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_qmllint_module-Debug-7020c10a8eeb2ff43266.json",
+					"name" : "appPhotoSpinner_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appPhotoSpinner_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appPhotoSpinner_qmltyperegistration-Debug-6aaa488a21f4dbea889d.json",
+					"name" : "appPhotoSpinner_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-ca29768f0684f0332258.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appPhotoSpinner_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appPhotoSpinner_aotstats_target-Debug-dd4522e0eddef374b71b.json",
+					"name" : "module_appPhotoSpinner_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Dominik/Documents/Projects/PhotoSpinner/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Dominik/Documents/Projects/PhotoSpinner"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

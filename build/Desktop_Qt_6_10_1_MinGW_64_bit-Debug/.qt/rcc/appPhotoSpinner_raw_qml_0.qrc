@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/PhotoSpinner/">
+    <file alias="Main.qml">C:/Users/Dominik/Documents/Projects/PhotoSpinner/Main.qml</file>
+    <file alias="PathSelection.qml">C:/Users/Dominik/Documents/Projects/PhotoSpinner/PathSelection.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,287 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 131,
+                            "functionName": "color",
+                            "line": 12,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 220,
+                            "functionName": "fill",
+                            "line": 11,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 102,
+                            "functionName": "fillMode",
+                            "line": 17,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 53,
+                            "functionName": "fill",
+                            "line": 15,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 92,
+                            "functionName": "left",
+                            "line": 23,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 26,
+                            "durationMicroseconds": 76,
+                            "functionName": "top",
+                            "line": 24,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 25,
+                            "functionName": "color",
+                            "line": 31,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 17,
+                            "functionName": "family",
+                            "line": 32,
+                            "message": "Cannot access value for name myFont"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 44,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 75,
+                            "functionName": "target",
+                            "line": 51,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "onChangeSourceIcon",
+                            "line": 52,
+                            "message": "Could not find signal \"changeSourceIcon\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 18,
+                            "functionName": "color",
+                            "line": 59,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 15,
+                            "functionName": "family",
+                            "line": 58,
+                            "message": "Cannot access value for name myFont"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 65,
+                            "functionName": "alignment",
+                            "line": 61,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 386,
+                            "functionName": "text",
+                            "line": 67,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 16,
+                            "functionName": "color",
+                            "line": 69,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 14,
+                            "functionName": "family",
+                            "line": 68,
+                            "message": "Cannot access value for name myFont"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 45,
+                            "functionName": "target",
+                            "line": 73,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 84,
+                            "functionName": "value",
+                            "line": 75,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 89,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 54,
+                            "functionName": "target",
+                            "line": 96,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "onChangeTargetIcon",
+                            "line": 97,
+                            "message": "Could not find signal \"changeTargetIcon\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 17,
+                            "functionName": "color",
+                            "line": 104,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 15,
+                            "functionName": "family",
+                            "line": 103,
+                            "message": "Cannot access value for name myFont"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 53,
+                            "functionName": "alignment",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 282,
+                            "functionName": "text",
+                            "line": 112,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 16,
+                            "functionName": "color",
+                            "line": 114,
+                            "message": "Cannot access value for name myFontColor"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 13,
+                            "functionName": "family",
+                            "line": 113,
+                            "message": "Cannot access value for name myFont"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 39,
+                            "functionName": "target",
+                            "line": 118,
+                            "message": "Cannot access value for name appController"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 28,
+                            "durationMicroseconds": 74,
+                            "functionName": "value",
+                            "line": 120,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "family",
+                            "line": 128,
+                            "message": "Could not find property \"family\"."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 54,
+                            "functionName": "alignment",
+                            "line": 131,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 145,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 65,
+                            "functionName": "alignment",
+                            "line": 143,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "C:/Users/Dominik/Documents/Projects/PhotoSpinner/PathSelection.qml"
+                }
+            ],
+            "moduleId": "PhotoSpinner(appPhotoSpinner)"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/PhotoSpinner/">
+    <file alias="resources.qrc">C:/Users/Dominik/Documents/Projects/PhotoSpinner/resources.qrc</file>
+  </qresource>
+</RCC>
+
