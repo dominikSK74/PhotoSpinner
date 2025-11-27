@@ -6,7 +6,7 @@ ApplicationWindow {
     visible: true
     visibility: Window.Maximized
     title: qsTr("Dla teściowej")
-    minimumHeight: 400
+    minimumHeight: 520
     minimumWidth: 680
 
     Loader {

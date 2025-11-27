@@ -3,7 +3,10 @@
 
 AppController::AppController(QObject *parent)
     : QObject{parent}, m_screen("PathSelection.qml")
-{}
+{
+    setScreen("ImageViewer.qml");
+    setImagePath("file:///C:\\Users\\domin\\Desktop\\folder1\\pies.jpg");
+}
 
 
 

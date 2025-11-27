@@ -108,16 +108,6 @@ Item {
                 font.pixelSize: 32
             }
 
-            CheckBox {
-                id: copycheck
-                text: "kopiuj"
-                palette.text: "white"
-                font.family: myFont
-                checkState: "Checked"
-                scale: 2.5
-                Layout.alignment: Qt.AlignHCenter
-            }
-
             Button {
                 implicitWidth: 400; implicitHeight: 60;
                 text: "Przeglądaj"

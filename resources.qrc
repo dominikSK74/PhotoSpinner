@@ -3,5 +3,7 @@
         <file>assets/background.jpg</file>
         <file>assets/foldercheck.svg</file>
         <file>assets/folder.svg</file>
+        <file>assets/viewerBackground.png</file>
+        <file>assets/menuBackground.png</file>
     </qresource>
 </RCC>
