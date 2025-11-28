@@ -1,9 +1,15 @@
 <RCC>
     <qresource prefix="/">
-        <file>assets/background.jpg</file>
         <file>assets/foldercheck.svg</file>
         <file>assets/folder.svg</file>
         <file>assets/viewerBackground.png</file>
         <file>assets/menuBackground.png</file>
+        <file>assets/left_arrow.svg</file>
+        <file>assets/right_arrow.svg</file>
+        <file>assets/delete.svg</file>
+        <file>assets/love.svg</file>
+        <file>assets/loveSmile.svg</file>
+        <file>assets/background.png</file>
+        <file>assets/logo.png</file>
     </qresource>
 </RCC>

@@ -2,10 +2,10 @@
 
 
 AppController::AppController(QObject *parent)
-    : QObject{parent}, m_screen("PathSelection.qml")
+    : QObject{parent}, m_screen("PathSelection.qml"), m_likeIcon("qrc:assets/love.svg")
 {
-    setScreen("ImageViewer.qml");
-    setImagePath("file:///C:\\Users\\domin\\Desktop\\folder1\\pies.jpg");
+    // setScreen("ImageViewer.qml");
+    // setImagePath("file:///C:\\Users\\domin\\Desktop\\folder1\\pies.jpg");
 }
 
 
@@ -59,22 +59,17 @@ void AppController::browsePictures() {
     filters << "*.jpg" << "*.jpeg" << "*.png";
 
     QStringList imageFiles = dir.entryList(filters, QDir::Files);
-    QStringList imagePaths;
 
     for (const QString &file : imageFiles) {
         imagePaths << dir.absoluteFilePath(file);
     }
 
-    for(const QString &file : imagePaths) {
-        qDebug() << file;
-    }
-
     setScreen("ImageViewer.qml");
 
     QString filePath = "file:///" + imagePaths[0];
-    qDebug() << filePath;
-
     setImagePath(filePath);
+    currentIndex = 0;
+    checkIconStatus();
 }
 
 
@@ -113,4 +108,103 @@ void AppController::setImagePath(const QString &imagePath) {
         m_imagePath = imagePath;
         emit imagePathChanged();
     }
+}
+
+void AppController::rightArrow() {
+
+    if(currentIndex < imagePaths.size()-1){
+        currentIndex++;
+        QString filePath = "file:///" + imagePaths[currentIndex];
+        setImagePath(filePath);
+        checkIconStatus();
+    }
+
+}
+
+void AppController::leftArrow() {
+
+    if(currentIndex > 0){
+        currentIndex--;
+        QString filePath = "file:///" + imagePaths[currentIndex];
+        setImagePath(filePath);
+        checkIconStatus();
+    }
+
+}
+
+void AppController::like() {
+
+    QString trg = targetFolder() + "/" + imagePaths[currentIndex].split("/").last();
+
+    if(QFile::exists(trg)) {
+
+        if(!QFile::remove(trg)){
+            QMessageBox::warning(nullptr, "Uwaga", "Nie udało się usunąć!");
+        }
+
+    }else{
+        if(!QFile::copy(imagePaths[currentIndex], trg)) {
+            QMessageBox::warning(nullptr, "Uwaga", "Nie udało się skopiować!");
+        }
+    }
+
+    checkIconStatus();
+}
+
+void AppController::checkIconStatus() {
+    QString trg = targetFolder() + "/" + imagePaths[currentIndex].split("/").last();
+    if(QFile::exists(trg)){
+        setLikeIcon("qrc:assets/loveSmile.svg");
+    }else {
+        setLikeIcon("qrc:assets/love.svg");
+    }
+}
+
+QString AppController::likeIcon() const { return m_likeIcon; }
+
+void AppController::setLikeIcon(const QString &likeIcon) {
+    if (likeIcon != m_likeIcon) {
+        m_likeIcon = likeIcon;
+        emit likeIconChanged();
+    }
+}
+
+void AppController::dropToTrash() {
+    QFile file(imagePaths[currentIndex]);
+
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Potwierdzenie");
+    msgBox.setText("Czy napewno chcesz usunąć to zdjęcie?");
+    msgBox.setIcon(QMessageBox::Question);
+    msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::No);
+    int selectedOption = msgBox.exec();
+
+    if(selectedOption == QMessageBox::Yes) {
+        if(!file.moveToTrash()) {
+            QMessageBox::warning(nullptr, "Uwaga", "Nie udało się usunąć!");
+        }
+    }
+    refreshPaths();
+}
+
+void AppController::refreshPaths() {
+    imagePaths.clear();
+    QString src = sourceFolder();
+    QDir dir(src);
+
+    QStringList filters;
+    filters << "*.jpg" << "*.jpeg" << "*.png";
+
+    QStringList imageFiles = dir.entryList(filters, QDir::Files);
+
+    for (const QString &file : imageFiles) {
+        imagePaths << dir.absoluteFilePath(file);
+    }
+
+    if(currentIndex == imagePaths.size()){
+        currentIndex--;
+    }
+
+    setImagePath("file:///" + imagePaths[currentIndex]);
 }

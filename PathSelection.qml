@@ -13,7 +13,7 @@ Item {
 
         Image {
             anchors.fill: parent
-            source: "qrc:assets/background.jpg"
+            source: "qrc:assets/background.png"
             fillMode: Image.PreserveAspectCrop
         }
 

@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
+
 Item {
     id: root
     // width: 800; height: 600
@@ -47,28 +48,29 @@ Item {
             fillMode: Image.Stretch
         }
 
-        Column {
+        Row {
+            anchors.centerIn: parent
             spacing: 10
-            Button {
-                text: "plus"
-                onClicked: {
-                    imgScale += 0.1
-                    console.log(imgScale)
-                }
+
+            CustomButton {
+                iconsrc: "qrc:assets/delete.svg"
+                onClicked: appController.dropToTrash();
             }
 
-            Button {
-                    id: button
-                    text: "A Special Button"
-                    background: Rectangle {
-                        implicitWidth: 100
-                        implicitHeight: 40
-                        color: button.down ? "red" : "green"
-                        border.color: "orange"
-                        border.width: 1
-                        radius: 4
-                    }
-                }
+            CustomButton {
+                iconsrc: "qrc:assets/left_arrow.svg"
+                onClicked: appController.leftArrow();
+            }
+
+            CustomButton {
+                iconsrc: "qrc:assets/right_arrow.svg"
+                onClicked: appController.rightArrow();
+            }
+
+            CustomButton {
+                iconsrc: appController.likeIcon
+                onClicked: appController.like();
+            }
         }
     }
 }
