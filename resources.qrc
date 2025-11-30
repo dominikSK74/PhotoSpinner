@@ -11,5 +11,9 @@
         <file>assets/loveSmile.svg</file>
         <file>assets/background.png</file>
         <file>assets/logo.png</file>
+        <file>assets/photobackground.png</file>
+        <file>assets/rotateleft.svg</file>
+        <file>assets/rotateright.svg</file>
+        <file>assets/trashicon.svg</file>
     </qresource>
 </RCC>

@@ -2,11 +2,13 @@
 #include <QQmlApplicationEngine>
 #include <appcontroller.h>
 #include <QQmlContext>
+#include <QIcon>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    app.setWindowIcon(QIcon(":/assets/logo.png"));
     QQmlApplicationEngine engine;
     AppController controller;
 

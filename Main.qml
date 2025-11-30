@@ -1,11 +1,12 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Window
 
 ApplicationWindow {
     id: root
     visible: true
     visibility: Window.Maximized
-    title: qsTr("Dla teściowej")
+    title: qsTr("PhotoSpinner")
     minimumHeight: 520
     minimumWidth: 680
 

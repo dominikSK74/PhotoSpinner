@@ -8,6 +8,8 @@
 #include <QStringList>
 #include <QMessageBox>
 #include <QFile>
+#include <QImageReader>
+#include <QImageIOHandler>
 
 class AppController : public QObject
 {
@@ -17,6 +19,7 @@ class AppController : public QObject
     Q_PROPERTY(QString screen READ screen WRITE setScreen NOTIFY screenChanged)
     Q_PROPERTY(QString imagePath READ imagePath WRITE setImagePath NOTIFY imagePathChanged)
     Q_PROPERTY(QString likeIcon READ likeIcon WRITE setLikeIcon NOTIFY likeIconChanged)
+    Q_PROPERTY(int imgRotation READ imgRotation WRITE setImgRotation NOTIFY imgRotationChanged)
     int currentIndex;
     QStringList imagePaths;
 
@@ -38,6 +41,9 @@ public:
     QString likeIcon() const;
     void setLikeIcon(const QString &likeIcon);
 
+    int imgRotation() const;
+    void setImgRotation(const int &imgRotation);
+
     void checkIconStatus();
     void refreshPaths();
 
@@ -49,6 +55,9 @@ public slots:
     void leftArrow();
     void like();
     void dropToTrash();
+    void setRotation();
+    void rotateLeft();
+    void rotateRight();
 
 signals:
     void changeSourceIcon(QString iconPath);
@@ -59,6 +68,7 @@ signals:
     void screenChanged();
     void imagePathChanged();
     void likeIconChanged();
+    void imgRotationChanged();
 
 private:
     QString m_sourceFolder;
@@ -66,6 +76,7 @@ private:
     QString m_screen;
     QString m_imagePath;
     QString m_likeIcon;
+    int m_imgRotation;
 
 };
 

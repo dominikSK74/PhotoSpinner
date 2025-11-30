@@ -12,7 +12,7 @@ Item {
         anchors.fill: parent
         Image {
             anchors.fill: parent
-            source: "qrc:assets/viewerBackground.png"
+            source: "qrc:assets/photobackground.png"
             fillMode: Image.Stretch
         }
 
@@ -22,7 +22,7 @@ Item {
             source: appController.imagePath
             fillMode: Image.PreserveAspectFit
             smooth: true
-
+            rotation: appController.imgRotation
             scale: imgScale
         }
     }
@@ -38,38 +38,62 @@ Item {
     Rectangle {
         id: menuBox
         anchors.bottom: parent.bottom
-        width: parent.width; height: 60
-        z: 1
-        color: "#00000000"
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 10
+        radius: 25
 
-        Image {
-            anchors.fill: parent
-            source: "qrc:assets/menuBackground.png"
-            fillMode: Image.Stretch
-        }
+        height: 60; width: 420;
+        z: 1
+        // color: "#00000000"
+        color: "#ff8fab"
+
+        // Image {
+        //     anchors.fill: parent
+        //     source: "qrc:assets/menuBackground.png"
+        //     fillMode: Image.Stretch
+        // }
 
         Row {
             anchors.centerIn: parent
-            spacing: 10
+            spacing: 30
 
-            CustomButton {
-                iconsrc: "qrc:assets/delete.svg"
-                onClicked: appController.dropToTrash();
+            Row {
+                spacing: 10
+                CustomButton {
+                    iconsrc: "qrc:assets/delete.svg"
+                    onClicked: appController.dropToTrash();
+                }
+
+                CustomButton {
+                    iconsrc: "qrc:assets/rotateleft.svg"
+                    onClicked: appController.rotateLeft();
+                }
             }
 
-            CustomButton {
-                iconsrc: "qrc:assets/left_arrow.svg"
-                onClicked: appController.leftArrow();
+            Row {
+                spacing: 10
+                CustomButton {
+                    iconsrc: "qrc:assets/left_arrow.svg"
+                    onClicked: appController.leftArrow();
+                }
+
+                CustomButton {
+                    iconsrc: "qrc:assets/right_arrow.svg"
+                    onClicked: appController.rightArrow();
+                }
             }
 
-            CustomButton {
-                iconsrc: "qrc:assets/right_arrow.svg"
-                onClicked: appController.rightArrow();
-            }
+            Row {
+                spacing: 10
+                CustomButton {
+                    iconsrc: "qrc:assets/rotateright.svg"
+                    onClicked: appController.rotateRight();
+                }
 
-            CustomButton {
-                iconsrc: appController.likeIcon
-                onClicked: appController.like();
+                CustomButton {
+                    iconsrc: appController.likeIcon
+                    onClicked: appController.like();
+                }
             }
         }
     }

@@ -3,10 +3,7 @@
 
 AppController::AppController(QObject *parent)
     : QObject{parent}, m_screen("PathSelection.qml"), m_likeIcon("qrc:assets/love.svg")
-{
-    // setScreen("ImageViewer.qml");
-    // setImagePath("file:///C:\\Users\\domin\\Desktop\\folder1\\pies.jpg");
-}
+{}
 
 
 
@@ -67,8 +64,8 @@ void AppController::browsePictures() {
     setScreen("ImageViewer.qml");
 
     QString filePath = "file:///" + imagePaths[0];
-    setImagePath(filePath);
     currentIndex = 0;
+    setImagePath(filePath);
     checkIconStatus();
 }
 
@@ -81,6 +78,16 @@ void AppController::setSourceFolder(const QString &folder) {
         emit sourceFolderChanged();
     }
 }
+
+int AppController::imgRotation() const { return m_imgRotation; }
+
+void AppController::setImgRotation(const int &imgRotation) {
+    if (imgRotation != m_imgRotation) {
+        m_imgRotation = imgRotation;
+        emit imgRotationChanged();
+    }
+}
+
 
 QString AppController::targetFolder() const { return m_targetFolder; }
 
@@ -107,6 +114,7 @@ void AppController::setImagePath(const QString &imagePath) {
     if(imagePath != m_imagePath){
         m_imagePath = imagePath;
         emit imagePathChanged();
+        setRotation();
     }
 }
 
@@ -207,4 +215,23 @@ void AppController::refreshPaths() {
     }
 
     setImagePath("file:///" + imagePaths[currentIndex]);
+}
+
+void AppController::setRotation() {
+    QImageReader reader(imagePaths[currentIndex]);
+    auto t = reader.transformation();
+    int angle = 0;
+
+    if (t & QImageIOHandler::TransformationRotate90)  angle = -90;
+    else if (t & QImageIOHandler::TransformationRotate180) angle = 180;
+    else if (t & QImageIOHandler::TransformationRotate270) angle = 90;
+    setImgRotation(angle);
+}
+
+void AppController::rotateLeft() {
+    setImgRotation(imgRotation() - 90);
+}
+
+void AppController::rotateRight() {
+    setImgRotation(imgRotation() + 90);
 }
